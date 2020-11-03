@@ -1,0 +1,59 @@
+:root {
+    --primary-color-100: #F5F5F5;
+    --primary-color-200: #D9D9D9;
+    --primary-color-300: #C4C4C4;
+    --primary-color-400: #9D9D9D;
+    --primary-color-500: #7B7B7B;
+    --primary-color-600: #555555;
+    --primary-color-700: #434343;
+    --primary-color-800: #262626;
+    --primary-color-900: #000000; 
+}
+
+
+
+/* ========================================================================================================= */
+
+@font-face {
+    font-family: "OpenSans";
+    src: url("./fonts/OpenSans-Regular.ttf");
+}
+
+@font-face {
+    font-family: "OpenSans-SB";
+    src: url("./fonts/OpenSans-SemiBold.ttf");
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: "OpenSans-B";
+    src: url("./fonts/OpenSans-Bold.ttf");
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: "OpenSans-L";
+    src: url("./fonts/OpenSans-Light.ttf");
+    font-weight: 300;
+}
+
+body {
+    font-family: OpenSans;
+    background-color: var(--primary-color-100);
+}
+
+h1, h2 {
+    font-family: OpenSans-SB;
+    color: var(--primary-color-800);
+}
+
+h3 {
+    font-family: OpenSans-L, serif;
+    color: var(--primary-color-800);
+}
+
+/* ========================================================================================================= */
+
+nav {
+    display: flex;
+}
