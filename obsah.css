@@ -1,0 +1,325 @@
+/*
+
+definice vzhledu elementů tvořících obecný obsah bude
+uložena v samostatném stylovém souboru nazvaném obsah.css
+zde bude použito pouze selektoru prvků k přiřazování stylu
+
+ */
+
+:root {
+    --primary-color-100: #FFFFFF;
+    --primary-color-200: #BEE3F4;
+    --primary-color-300: #BEE3F4;
+    --primary-color-400: #9ED5EF;
+    --primary-color-500: #7EC8EA;
+    --primary-color-600: #5DBAE5;
+    --primary-color-700: #3DACDF;
+    --primary-color-800: #239CD4;
+    --primary-color-900: #1D84B5;
+
+    --secondary-color-100: #F5F5F5;
+    --secondary-color-200: #D9D9D9;
+    --secondary-color-300: #C4C4C4;
+    --secondary-color-400: #9D9D9D;
+    --secondary-color-500: #7B7B7B;
+    --secondary-color-600: #555555;
+    --secondary-color-700: #434343;
+    --secondary-color-800: #262626;
+}
+
+body {
+    font-family: OpenSans, sans-serif;
+    background-color: var(--primary-color-100);
+    margin: 0;
+    line-height: 2.1rem;
+}
+
+/* =============================================== FONTS ========================================================== */
+
+@font-face {
+    font-family: "OpenSans";
+    src: url("./fonts/OpenSans-Regular.ttf");
+}
+
+@font-face {
+    font-family: "OpenSans-SB";
+    src: url("./fonts/OpenSans-SemiBold.ttf");
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: "OpenSans-B";
+    src: url("./fonts/OpenSans-Bold.ttf");
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: "OpenSans-L";
+    src: url("./fonts/OpenSans-Light.ttf");
+    font-weight: 300;
+}
+
+/* =============================================== HEADERS AND TEXT ========================================================== */
+
+h1{
+    font-family: OpenSans-SB, sans-serif;
+    color: var(--primary-color-800);
+    font-size: 2.2rem;
+}
+
+h2 {
+    font-family: OpenSans-SB, sans-serif;
+    color: var(--primary-color-800);
+    font-size: 1.7rem;
+}
+
+h3 {
+    font-family: OpenSans-L, sans-serif;
+    color: var(--primary-color-800);
+    font-size: 2rem;
+}
+
+h4, h5, h6 {
+    font-family: OpenSans-SB, sans-serif;
+    color: var(--secondary-color-800);
+    font-size: 1.4rem;
+}
+
+ul, ol {
+    line-height: 2.5rem;
+}
+
+nav ul {
+    float: left;
+    padding-left: 0;
+}
+
+nav ul li {
+    float: left;
+    list-style-type: none;
+    margin-right: 3vw;
+    line-height: 70px;
+    font-size: 1.5rem;
+}
+
+nav ul li:hover {
+    text-decoration: none;
+}
+
+.nav-2 ul {
+    float: left;
+    padding-left: 0;
+}
+
+.nav-2 ul li {
+    float: left;
+    list-style-type: none;
+    margin-right: 3vw;
+    line-height: 70px;
+    font-size: 1.5rem;
+}
+
+.nav-2 ul li:hover {
+    text-decoration: none;
+}
+
+table, th, td {
+    border: 2px solid var(--secondary-color-300);
+    padding: .7rem;
+    max-width: 75vw;
+    border-collapse: collapse;
+}
+
+.person-title h2 {
+    margin-left: -40px;
+    margin-bottom: 8px;
+}
+
+.person-title h3 {
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: -40px;
+}
+
+.person-title p {
+    margin: 18px;
+    padding-bottom: 18px;
+}
+
+.person-title label {
+    margin: 18px;
+    padding-bottom: 18px;
+}
+
+.cta-body h2 {
+    margin-top: 8vw;
+    position: relative;
+    font-size: 2.6rem;
+    background-color: rgba(255, 255, 255, 0.3);
+    left: 8vw;
+    max-width: 95%;
+    line-height: normal !important;
+}
+
+.header-1 h2 {
+    position: absolute;
+    width: 50%;
+    font-size: 3rem;
+    left: 16vw;
+    top: 16rem;
+    max-width: 670px;
+    line-height: 4rem !important;
+}
+
+/* =============================================== LINKS ========================================================== */
+
+a:link {
+    color: var(--secondary-color-700);
+}
+
+a:visited {
+    color: var(--secondary-color-700);
+}
+
+a:hover {
+    color: var(--primary-color-700);
+}
+
+a:active {
+    color: var(--primary-color-600);
+}
+
+nav a {
+    text-decoration: none;
+}
+
+.nav-2 a {
+    text-decoration: none;
+}
+
+.cta-body a {
+    left: 8vw;
+    position: relative;
+}
+
+/* =============================================== BTN ========================================================== */
+
+.btn {
+    display: inline-block;
+    text-align: center;
+    color: #212529 !important;
+    text-decoration: none;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: transparent;
+    border: 1px solid transparent;
+    /* padding: .375rem .75rem; */
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 8px;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    margin-bottom: 8px;
+    margin-top: 8px;
+}
+
+.btn-primary {
+    color: white !important;
+    background-color: var(--primary-color-900) !important;
+}
+
+.btn-primary:hover {
+    background: var(--primary-color-700) !important;
+}
+
+.btn-lg {
+    font-size: 1.50rem;
+    padding: 8px 32px;
+}
+
+.btn-m {
+    font-size: 1.25rem;
+    padding: 8px 24px;
+}
+
+.btn-s {
+    font-size: 1rem;
+    padding: 8px 24px;
+}
+
+/* =============================================== IMG ========================================================== */
+
+nav img {
+    max-width: 20rem;
+    min-width: 10rem;
+}
+
+.socials img {
+    width: 32px !important;
+    min-width: 0 !important;
+    margin-right: 32px;
+}
+
+.header-2 img {
+    position: absolute;
+    max-height: 500px;
+    right: 10vw;
+    z-index: -1;
+}
+
+/* =============================================== OTHERS ========================================================== */
+
+.active {
+    color: var(--primary-color-800) !important;
+    font-weight: 600;
+}
+
+hr {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+input {
+    border: none;
+    width: 89%;
+    height: 3rem;
+    font-size: 1.0625rem;
+    padding: 0.825rem 0.875rem 0.5rem;
+    background-color: var(--secondary-color-100);
+    border-radius: 8px;
+    color: var(--primary-color-800);
+    display: block;
+    margin: auto;
+
+}
+
+label > input {
+    height: 2rem;
+}
+
+input:focus {
+    outline: none;
+}
+
+textarea {
+    resize: vertical;
+    border: 2px solid var(--secondary-color-300);
+    border-radius: 8px;
+    padding: 1.5rem 1rem;
+    font-family: OpenSans-L, serif;
+    max-width: 100%;
+}
+
+textarea:focus {
+    outline: none;
+}
+
+header {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(238, 247, 252, 0.2625) 39.17%, rgba(223, 241, 250, 0.75) 100%);
+    height: 500px;
+}
