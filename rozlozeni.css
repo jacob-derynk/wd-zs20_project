@@ -13,10 +13,10 @@ section {
     padding: 20px;
     width: 75%;
     min-height: 80px;
-    margin: auto;
     display: block;
     max-width: 50vw;
     font-size: 1.3rem;
+    margin: 280px auto auto;
 }
 
 .section {
@@ -26,34 +26,129 @@ section {
     position: relative;
 }
 
+section h1 {
+    margin-bottom: 32px;
+}
+/* ========================= SECTIONS ========================= */
+
+section > .persons {
+    width: 95%;
+    min-height: 80px;
+    margin: auto;
+    font-size: 1.3rem;
+}
+
 .persons {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    width: 90vw;
+    /*grid-template-columns: 1fr 1fr 1fr;*/
+    grid-gap: 2rem;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fit, minmax(20ch, 1fr));
+    max-width: 1700px;
+
 }
 
 .person-entry {
     display: grid;
-    grid-template-columns: 1.5fr .5fr;
+    grid-template-columns: 1fr 1fr;
 }
 
+.person-entry > .person-photo {
+    object-fit: cover;
+    height: 28vw;
+    width: 17vw;
+    max-width: 300px;
+    max-height: 350px;
+}
+
+.person-entry > img {
+    background-color: rgba(255,255,255,0.3);
+}
+
+/*
 .person-photo {
     background-color: rgb(199, 226, 255);
-    background-image: url(./img/tom.png);
+    background-image: url(./img/jon.png);
     background-size: cover;
     background-blend-mode: overlay;
     width: 50%;
     height: 100%;
     float: left;
     max-width: 250px;
+} */
+
+.person-entry > .person-title {
+    padding: 0.3rem 1rem 1rem;
+
 }
 
-.person-title {
-    float: right;
-    background-color: rgb(158, 158, 158);
-    width: 50%;
-    height: 100%;
-    max-width: 250px;
+section > .news {
+    width: 95%;
+    min-height: 80px;
+    font-size: 1.3rem;
+    margin: auto;
+}
+
+.news {
+    display: grid;
+    grid-gap: 2rem;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fit, minmax(20ch, 1fr));
+    max-width: 1700px;
+}
+
+.news-entry {
+    margin-top: -155px;
+    padding: 16px;
+    max-width: 266px;
+}
+
+#news-box {
+    min-width: 298px;
+    margin: auto;
+}
+
+.references {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-row-gap: 200px;
+    grid-column-gap: 32px;
+    max-width: 1100px;
+    margin-top: 64px;
+}
+
+.reference-card {
+    width: 20vw;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 428px;
+}
+
+.reference-card > img {
+    width: 100%;
+
+}
+
+.reference-card > h4{
+    margin-top: 0;
+    margin-bottom: 24px;
+}
+
+.reference-card > p {
+    width: 75%;
+    height: 275px;
+}
+
+.reference-card .btn {
+    margin-top: auto;
+}
+
+
+/* ============================ CTAs ============================ */
+
+.section-cta {
+    display: grid;
+    grid-template-columns: 1.5fr .5fr;
 }
 
 section .cta {
@@ -86,7 +181,28 @@ section .cta {
     width: 50%;
 }
 
+.cta-mobile {
+    display: none;
+}
+
 /* ============================ NAVBAR ============================ */
+
+.fixed-nav {
+    position: fixed;
+    width: 100%;
+    background: white;
+    z-index: 1000;
+    top: 0;
+    overflow: hidden;
+}
+
+.fixed-nav-mobile{
+    position: sticky;
+    width: 100%;
+    z-index: 1000;
+    top:0;
+    left:0;
+}
 
 .nav-mobile {
     display: none;
@@ -113,11 +229,77 @@ nav {
 }
 
 .socials {
-    right: 3vw;
+    right: 1vw;
     padding: 0;
     position: absolute;
     top: 1rem;
+    margin-top: -4px;
 }
+
+#mobile-menu {
+    width: 100%;
+    background: linear-gradient(180deg, var(--primary-color-200) 0%, var(--primary-color-300) 100%);
+    position: absolute;
+    display: none;
+    z-index: 1001;
+}
+
+#mobile-menu > a {
+    line-height: 3.5rem;
+    padding-left: 40px;
+
+    text-decoration: none;
+    font-size: 17px;
+    display: block;
+}
+
+#mobile-menu > a:hover {
+    background-color: var(--primary-color-400);
+    color: var(--secondary-color-800) ;
+}
+
+#mobile-menu .active {
+    font-family: OpenSans-SB, serif;
+}
+
+#mobile-menu > .sub {
+    padding-left:80px;
+
+}
+
+#mobile-menu .socials-hidden {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin-bottom: 16px;
+}
+
+.socials-hidden img {
+    width: 45%;
+    padding: 18px;
+    margin: auto;
+    display: block;
+}
+
+.dropdown-text {
+    position: fixed;
+    display: none;
+    z-index: 1001;
+    background-color: white;
+    padding-left: 8px;
+    padding-right: 16px;
+    padding-bottom: 16px;
+    top: 23%;
+}
+
+.dropdown-text a {
+    line-height: 3.5rem;
+    padding-left: 40px;
+
+    text-decoration: none;
+    font-size: 17px;
+    display: block;
+}
+
 
 /* ============================ FOOTER ============================ */
 
@@ -131,10 +313,32 @@ footer {
     height: 22rem;
     justify-items: center;
     display: grid;
+    grid-template-columns: 1fr;
+}
+
+.footer-1 h2 {
+    color: var(--secondary-color-700);
+    margin-top: 32px;
+    margin-bottom: -24px;
+}
+
+.footer-1 p {
+    max-width: 80vw;
+    text-align: center;
+    margin-top: 0;
+    height: 45px;
 }
 
 .footer-1 .btn {
     height: 25px !important;
+}
+
+.footer-1 label {
+    margin-top: -50px;
+}
+
+.footer-1 .btn {
+    margin-top: -46px;
 }
 
 .footer-2 {
@@ -183,6 +387,35 @@ footer {
     }
 }
 
+@media only screen and (max-width: 1700px){
+    .person-entry > .person-photo {
+        height: 20vw;
+        width: 15vw;
+    }
+
+    .person-title p {
+        font-size: 1rem;
+    }
+}
+
+@media only screen and (max-width: 1400px) {
+    .news {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .reference-card > h4 {
+        margin-bottom: 0;
+        height: 150px;
+    }
+
+    .reference-card > p {
+        width: 90%;
+        height: 350px;
+    }
+
+
+}
+
 @media only screen and (max-width: 1200px) {
 
     nav {
@@ -208,9 +441,30 @@ footer {
         font-size: 1.25rem;
     }
 
-    ul {
-
+    .persons {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
     }
+
+    section > .persons {
+        width: 75%;
+    }
+
+    .person-title p {
+        font-size: 1rem;
+    }
+
+    .section-cta {
+        display: grid;
+        grid-template-columns: 1.2fr .7fr;
+    }
+
+    .reference-card > p {
+        width: 90%;
+        height: 400px;
+    }
+
+
 }
 
 @media only screen and (max-width: 992px) and (min-width: 769px){
@@ -233,9 +487,75 @@ footer {
     section{
         max-width: 75vw;
     }
+
+    section > .persons {
+        width: 55%;
+    }
+
+    .persons {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(1, 1fr);
+        grid-row-gap: 6rem;
+    }
+
+    .person-entry > .person-photo {
+        height: 30vw;
+        width: 25vw;
+    }
+
+    .person-title p {
+        font-size: 1.2rem;
+        line-height: 1.6rem;
+    }
+
+    .news {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .reference-card {
+        width: 30vw;
+    }
+
+    .reference-card p {
+        height: 375px;
+    }
+
+    .references {
+        grid-row-gap: 150px;
+    }
 }
 
 @media only screen and (max-width: 768px){
+
+    .references{
+        grid-template-columns: 1fr;
+    }
+
+    .reference-card {
+        width: 50vw;
+        min-width: 300px;
+    }
+
+    .reference-card h4 {
+        height: 100px;
+    }
+
+    .reference-card p {
+        height: auto;
+    }
+
+    .reference-card .btn {
+        margin-top: 32px;
+    }
+
+    .fixed-nav{
+        position: unset;
+    }
+
+    header{
+        margin-top: 16px;
+    }
+
     .nav-1 {
         margin-top: 8px
     }
@@ -257,32 +577,121 @@ footer {
     }
 
     nav img {
-        min-width: 245px;
+        min-width: 225px;
     }
 
     .nav-mobile {
         display: grid;
         grid-template-columns: 1fr 1fr;
         background-color: var(--primary-color-200);
-        margin-bottom: 16px;
     }
 
     .nav-mobile .mob-hamburger {
         justify-content: end;
         display: flex;
         margin-right: 24px;
+        -webkit-justify-content: flex-end;
+        cursor: pointer;
     }
 
     .nav-mobile .heading {
         margin-left: 24px;
+        width: 73vw;
+
     }
 
     .header-1 h2 {
-        font-size: 2.5rem;
+        font-size: 2.4rem;
+        line-height: 3.4rem !important;
+    }
+
+    .header-3 img {
+        display: none;
     }
 
     section{
         max-width: 75vw;
+        padding: 0;
+        margin-top: 56px;
     }
 
+    section > .persons {
+        width: 90%;
+    }
+
+    .persons {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(1, 1fr);
+        grid-row-gap: 6rem;
+    }
+
+    .person-entry > .person-photo {
+        height: 69vw;
+        width: 42vw;
+    }
+
+    .person-title p {
+        font-size: 1.2rem;
+        line-height: 1.6rem;
+    }
+
+    #support {
+        font-size: 16px;
+        padding-left: 25px;
+        padding-right: 25px;
+
+    }
+
+    .section-cta {
+        display: grid;
+        grid-template-columns: 0 1fr;
+    }
+
+    .news {
+        grid-template-columns: 1fr;
+    }
+
+    .cta-photo {
+        display: none;
+    }
+
+    .cta-body {
+        display: none;
+    }
+
+    .cta .content {
+        display: none;
+    }
+
+    .cta-mobile {
+        display: grid;
+        grid-template-columns: 1fr;
+        margin: auto;
+        width: 95vw;
+        max-width: 95vw;
+    }
+
+    .cta-mobile img {
+        width: 70vw;
+        max-width: 300px;
+        margin: auto;
+    }
+
+    .cta-mobile h2 {
+        width: 80vw;
+        margin: 48px auto;
+    }
+
+    .heading > h1 {
+        margin-top: 24px !important;
+        margin-bottom: 24px !important;
+    }
+
+    section h1 {
+        display: none;
+    }
+
+    section .breadcrumb {
+        display: none;
+    }
 }

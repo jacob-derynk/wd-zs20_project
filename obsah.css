@@ -8,7 +8,7 @@ zde bude použito pouze selektoru prvků k přiřazování stylu
 
 :root {
     --primary-color-100: #FFFFFF;
-    --primary-color-200: #BEE3F4;
+    --primary-color-200: #DCF4FF;
     --primary-color-300: #BEE3F4;
     --primary-color-400: #9ED5EF;
     --primary-color-500: #7EC8EA;
@@ -21,10 +21,11 @@ zde bude použito pouze selektoru prvků k přiřazování stylu
     --secondary-color-200: #D9D9D9;
     --secondary-color-300: #C4C4C4;
     --secondary-color-400: #9D9D9D;
-    --secondary-color-500: #7B7B7B;
+    --secondary-color-500: #7b7b7b;
     --secondary-color-600: #555555;
     --secondary-color-700: #434343;
     --secondary-color-800: #262626;
+    --secondary-color-900: #000000;
 }
 
 body {
@@ -65,6 +66,7 @@ h1{
     font-family: OpenSans-SB, sans-serif;
     color: var(--primary-color-800);
     font-size: 2.2rem;
+    margin-bottom: 64px;
 }
 
 h2 {
@@ -131,8 +133,12 @@ table, th, td {
 }
 
 .person-title h2 {
-    margin-left: -40px;
+    margin-left: -80px;
     margin-bottom: 8px;
+    background-color: rgba(255,255,255,0.4);
+    padding: 16px;
+    color: var(--secondary-color-800);
+    margin-top: 0;
 }
 
 .person-title h3 {
@@ -142,8 +148,10 @@ table, th, td {
 }
 
 .person-title p {
-    margin: 18px;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
     padding-bottom: 18px;
+    margin-top: 8px;
 }
 
 .person-title label {
@@ -166,7 +174,7 @@ table, th, td {
     width: 50%;
     font-size: 3rem;
     left: 16vw;
-    top: 16rem;
+    top: 14rem;
     max-width: 670px;
     line-height: 4rem !important;
 }
@@ -202,6 +210,16 @@ nav a {
     position: relative;
 }
 
+.breadcrumb a {
+    text-decoration: none;
+    margin-bottom: 32px;
+}
+
+#mobile-navbar .breadcrumb {
+    margin-left: 24px;
+    margin-bottom: 8px;
+}
+
 /* =============================================== BTN ========================================================== */
 
 .btn {
@@ -231,6 +249,16 @@ nav a {
     background-color: var(--primary-color-900) !important;
 }
 
+.btn-secondary {
+    color: var(--secondary-color-800) !important;
+    background-color: white;
+    border: 1px solid var(--secondary-color-800);
+}
+
+.btn-secondary:hover{
+    background: var(--secondary-color-200) !important;
+}
+
 .btn-primary:hover {
     background: var(--primary-color-700) !important;
 }
@@ -248,6 +276,11 @@ nav a {
 .btn-s {
     font-size: 1rem;
     padding: 8px 24px;
+}
+
+#join-sec-btn {
+    margin-top: 48px;
+    margin-bottom: 48px;
 }
 
 /* =============================================== IMG ========================================================== */
@@ -322,4 +355,5 @@ header {
     grid-template-columns: 1fr 2fr 1fr;
     background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(238, 247, 252, 0.2625) 39.17%, rgba(223, 241, 250, 0.75) 100%);
     height: 500px;
+    margin-top: 280px;
 }
