@@ -1,0 +1,115 @@
+.box {
+    width: 750px;
+    height: 250px;
+    background-color: var(--primary-color-200);
+    margin: 25% auto auto;
+    padding: 32px;
+
+    position: relative;
+    overflow: hidden;
+
+}
+
+.box img {
+    opacity: .3;
+}
+
+.box h1{
+    font-size: 2rem;
+    line-height: 3rem;
+    margin-top: 0;
+    margin-bottom: 24px;
+
+    animation: nadpis 5s;
+
+}
+
+.box p {
+    font-family: OpenSans-SB, serif;
+}
+
+.logo {
+    position: absolute;
+    width: 350px;
+    left: 52%;
+    opacity: .5;
+}
+
+.one {
+    animation: one 5s;
+}
+
+.two {
+    animation: two 5s;
+}
+
+.three {
+    animation: three 5s;
+}
+
+.btn-anim a {
+    animation: button 6s;
+    width: 20%;
+
+}
+
+h4 {
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 60%;
+    z-index: 1000;
+    position: relative;
+    animation: text-name 3s;
+
+    padding: 5px 10px;
+    background-color: rgba(255, 255, 255, 0.5)
+}
+
+
+@keyframes one
+{
+    0%      {top: -18rem;}
+    25%     {opacity: .8}
+    50%    {top: 2rem;}
+    100%    {opacity: .3}
+}
+
+@keyframes two
+{
+    0%      {left: 5rem;}
+    25%     {opacity: .8}
+    50%     {left: 52%}
+    100%    {opacity: .3}
+}
+
+@keyframes three
+{
+    0%      {left: 41rem;}
+    25%     {opacity: .8}
+    50%     {left: 52%}
+    100%    {opacity: .3}
+}
+
+@keyframes nadpis {
+    0%      {opacity: 0;}
+    25%     {opacity: 0.25}
+    50%     {opacity: 0.5}
+    75%     {opacity: 0.75}
+    100%    {opacity: 1;}
+}
+
+@keyframes button {
+    0%      {width: 20%;}
+    25%     {width: 25%;}
+    50%    {width: 20%;}
+    75%     {width: 25%;}
+    100%     {width: 20%;}
+}
+
+@keyframes text-name {
+    0%      {background-color: rgba(255, 255 ,255 ,0);}
+    25%     {background-color: rgba(255, 255 ,255 ,0.1);}
+    50%     {background-color: rgba(255, 255 ,255 ,0.1);}
+    75%     {background-color: rgba(255, 255 ,255 ,0.3);}
+    100%    {background-color: rgba(255, 255 ,255 ,0.5);}
+}

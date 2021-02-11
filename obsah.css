@@ -49,12 +49,6 @@ body {
 }
 
 @font-face {
-    font-family: "OpenSans-B";
-    src: url("./fonts/OpenSans-Bold.ttf");
-    font-weight: 700;
-}
-
-@font-face {
     font-family: "OpenSans-L";
     src: url("./fonts/OpenSans-Light.ttf");
     font-weight: 300;

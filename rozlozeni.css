@@ -694,4 +694,8 @@ footer {
     section .breadcrumb {
         display: none;
     }
+
+    .arrow {
+        display: none;
+    }
 }

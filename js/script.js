@@ -10,19 +10,26 @@ $(document).ready(function () {
         }
     });
 
+    let flag = true;
+
     $(window).scroll(function () {
-        if ($(this).scrollTop() > 135) {
+        if ($(this).scrollTop() > 135 && flag) {
 
-            $("#nav").css({"margin-bottom": "-32px"},);
-            $("#nav-img").css({"max-width": "15rem"});
-            $("#dropdown-text").css({"top": "18%"});
-
-        } else {
-            $("#nav").css({"margin-bottom": "10px"},);
-            $("#nav-img").css({"max-width": "20rem"},);
-            $("#dropdown-text").css({"top": "23%"},);
+            $("#nav").animate({"margin-bottom": "-32px"},);
+            $("#nav-img").animate({"max-width": "15rem"});
+            $("#dropdown-text").animate({"top": "15%"});
+            flag=false;
         }
+    });
 
+    $(window).scroll(function () {
+        if ($(this).scrollTop() < 135 && !flag) {
+
+            $("#nav").animate({"margin-bottom": "10px"},);
+            $("#nav-img").animate({"max-width": "20rem"});
+            $("#dropdown-text").animate({"top": "21%"});
+            flag=true;
+        }
     });
 
     $("#mob-hamburger").click(function () {

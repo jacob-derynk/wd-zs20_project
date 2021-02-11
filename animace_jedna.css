@@ -1,0 +1,26 @@
+.header-2 .arrow{
+    position: relative;
+    width: 130px;
+    display: block;
+    left: 0;
+    right: 0;
+    bottom: 75px;
+    animation: ani_arrow 5s;
+    animation-iteration-count: infinite;
+
+    height: 150px;
+    z-index: -5000;
+}
+
+@media only screen and (max-width: 768px){
+    .header-2 .arrow{
+        display: none;
+    }
+}
+
+@keyframes ani_arrow
+{
+    0%      {bottom: 55px; fill: var(--primary-color-900); width: 75px}
+    50%     {bottom: 95px; fill: var(--primary-color-500); width: 150px}
+    100%    {bottom: 55px; fill: var(--primary-color-900); width: 75px}
+}
