@@ -1,2 +1,3 @@
 # wd-zs20_project
-Semestral project for Web Design course taken in winter semester of 2020.
+## Landing page for a political party 
+Semestral project for Web Design course taken in winter semester of 2020. 
